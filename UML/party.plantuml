@@ -1,0 +1,55 @@
+@startuml Party
+class Person 
+{
+    userid: int
+    lastname: String
+    firstname: String
+    username: String 
+    email : String 
+    password : String 
+    friends: ArrayList<Person>
+
+
+    getUserID() : int
+    getLastname() : String
+    getFirstname() : String
+    getUsername() : String
+    getEmail() : String
+    getPassword() : String 
+    getFriends() : ArrayList<Person>
+
+}
+
+class Party 
+{
+    partyid: int
+    participants : ArrayList<Person>
+    games : ArrayList<Game>
+
+    
+}
+
+class Game
+{
+    gameid : int
+    participants : Person[]
+    tournamentGame : boolean
+    result : int[]
+} 
+
+class Team
+{
+
+}
+
+class Tournament
+{
+    participants: ArrayList<Game>
+    teams: ArrayList<Team>
+    games: ArrayList<Game>
+
+
+} 
+
+
+@enduml
